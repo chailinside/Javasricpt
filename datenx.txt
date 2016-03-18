@@ -1,0 +1,12 @@
+		var tod=new Date();
+		var weekday=new Array("Minggu","Senin","Selasa","Rabu","Kamis","Jum'at","Sabtu");
+		var monthname=new Array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember");
+		var y = tod.getFullYear();
+		var m = tod.getMonth();
+		var d = tod.getDate();
+		var dow = tod.getDay();
+		var dispTime = " " + weekday[dow] + ", " + d + " " + monthname[m] + " " + y + " ";
+		if (dow==0) dispTime= "<b>: </b>" + "<font color='red'>" + dispTime + "</font>";
+		else if (dow==5) dispTime= "<b>: </b>" + "<font color='green'>" + dispTime + "</font>";
+		else dispTime= "<b>: </b>" + "<font color='#666666'>" + dispTime + "</font>";
+		document.write(dispTime);
